@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YIP </title>
+</head>
+
+<body style="font-size: 1rem; line-height: 1.5; box-sizing: border-box;">
+  <div class="container" style="margin: auto; width: 70%;">
+    <form class="form">
+      <h2 class="text-lead">Add Student</h2>
+      <div class="form-group" style="margin: .75rem auto;">
+        <label for="firstname">Firstname</label>
+        <input type="text" name="firstname" id="firstname" class="form-control" placeholder="Firstname" style="display: block;
+          text-align: left;
+          margin-top: .75rem;
+          width: 80%;
+          padding: .5rem .75rem;" />
+      </div>
+      <div class="form-group" style="margin: .75rem auto;">
+        <label for="middlename">Middlename</label>
+        <input type="text" name="middlename" id="middlename" class="form-control" placeholder="Middlename" style="display: block;
+          text-align: left;
+          margin-top: .75rem;
+          width: 80%;
+          padding: .5rem .75rem;" />
+      </div>
+      <div class="form-group" style="margin: .75rem auto;">
+        <label for="lastname">Lastname</label>
+        <input type="text" name="lastname" id="lastname" class="form-control" placeholder="Lastname" style="display: block;
+          text-align: left;
+          margin-top: .75rem;
+          width: 80%;
+          padding: .5rem .75rem;" />
+      </div>
+      <div class="form-group" style="margin: .75rem auto;">
+        <label for="dob">Date of Birth</label>
+        <input type="date" name="dob" id="dob" class="form-control" style="display: block;
+          text-align: left;
+          margin-top: .75rem;
+          width: 80%;
+          padding: .5rem .75rem;" />
+      </div>
+      <div class="form-group" style="margin: .75rem auto;">
+        <label for="department">Department</label>
+        <select name="department" id="department" class="form-control" style="display: block;
+          text-align: left;
+          margin-top: .75rem;
+          width: 80%;
+          padding: .5rem .75rem;">
+          <option value="Engineering">Engineering</option>
+        </select>
+      </div>
+      <div class="form-group" style="margin: .75rem auto;">
+        <label for="level"> Academic Level</label>
+        <select name="level" id="level" class="form-control" style="display: block;
+          text-align: left;
+          margin-top: .75rem;
+          width: 80%;
+          padding: .5rem .75rem;">
+          <option value="100L">Year 1</option>
+          <option value="200L">Year 2</option>
+        </select>
+      </div>
+      <div class="form-group" style="margin: .75rem auto;">
+        <label for="state_of_origin"> State of Origin</label>
+        <select name="state_of_origin" id="state_of_origin" class="form-control" style="display: block;
+          text-align: left;
+          margin-top: .75rem;
+          width: 80%;
+          padding: .5rem .75rem;">
+          <option disabled selected>--Select State--</option>
+          <option value="Abia">Abia</option>
+          <option value="Adamawa">Adamawa</option>
+          <option value="Akwa Ibom">Akwa Ibom</option>
+          <option value="Anambra">Anambra</option>
+          <option value="Bauchi">Bauchi</option>
+          <option value="Bayelsa">Bayelsa</option>
+          <option value="Benue">Benue</option>
+          <option value="Borno">Borno</option>
+          <option value="Cross Rive">Cross River</option>
+          <option value="Delta">Delta</option>
+          <option value="Ebonyi">Ebonyi</option>
+          <option value="Edo">Edo</option>
+          <option value="Ekiti">Ekiti</option>
+          <option value="Enugu">Enugu</option>
+          <option value="FCT">Federal Capital Territory</option>
+          <option value="Gombe">Gombe</option>
+          <option value="Imo">Imo</option>
+          <option value="Jigawa">Jigawa</option>
+          <option value="Kaduna">Kaduna</option>
+          <option value="Kano">Kano</option>
+          <option value="Katsina">Katsina</option>
+          <option value="Kebbi">Kebbi</option>
+          <option value="Kogi">Kogi</option>
+          <option value="Kwara">Kwara</option>
+          <option value="Lagos">Lagos</option>
+          <option value="Nasarawa">Nasarawa</option>
+          <option value="Niger">Niger</option>
+          <option value="Ogun">Ogun</option>
+          <option value="Ondo">Ondo</option>
+          <option value="Osun">Osun</option>
+          <option value="Oyo">Oyo</option>
+          <option value="Plateau">Plateau</option>
+          <option value="Rivers">Rivers</option>
+          <option value="Sokoto">Sokoto</option>
+          <option value="Taraba">Taraba</option>
+          <option value="Yobe">Yobe</option>
+          <option value="Zamfara">Zamfara</option>
+        </select>
+      </div>
+      <div class="form-group" style="margin: .75rem auto;">
+        <label for="lga"> Local Government Area</label>
+        <select name="lga" id="lga" class="form-control" style="display: block;
+          text-align: left;
+          margin-top: .75rem;
+          width: 80%;
+          padding: .5rem .75rem;">
+          <option value="Ikoyi">Ikoyi LGA</option>
+          <option value="Egbada">Egbeda LGA</option>
+        </select>
+      </div>
+      <div class="form-group" style="margin: .75rem auto;">
+        <label for="admission_year">Admission year</label>
+        <input type="number" min="1990" step="1" max="2020" value="2019" name="admission_year" id="admission_year"
+          class="form-control" style="display: block;
+          text-align: left;
+          margin-top: .75rem;
+          width: 80%;
+          padding: .5rem .75rem;" />
+      </div>
+      <div class="form-group" style="margin: .75rem auto;">
+        <label for="matric_number">Matric Number</label>
+        <input type="text" name="matric_number" id="matric_number" class="form-control" placeholder="Matric Number"
+          style="display: block;
+          text-align: left;
+          margin-top: .75rem;
+          width: 80%;
+          padding: .5rem .75rem;" />
+      </div>
+      <button type="submit" class="btn btn-primary" style="margin-top: 1rem;
+      padding: .75rem 1rem;
+      text-align: center;"> Submit </button>
+
+    </form>
+  </div>
+
+</body>
+
+</html>
