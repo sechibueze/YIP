@@ -9,7 +9,7 @@
 
 <body style="font-size: 1rem; line-height: 1.5; box-sizing: border-box;">
   <div class="container" style="margin: auto; width: 70%;">
-    <form class="form">
+    <form class="form" name="add-student" id="add-student">
       <h2 class="text-lead">Add Student</h2>
       <div class="form-group" style="margin: .75rem auto;">
         <label for="firstname">Firstname</label>
@@ -146,7 +146,79 @@
 
     </form>
   </div>
+  <script src="./scripts/functions.js"></script>
+  <script>
 
+    // Add student
+    const AddStudent = document.querySelector('#add-student');
+    AddStudent.addEventListener('submit', addStudent, false);
+
+    function addStudent(e) {
+      e.preventDefault()
+      let errors = [];
+      const firstname = document.forms['add-student']['firstname'];
+      const lastname = document.forms['add-student']['lastname'];
+      const middlename = document.forms['add-student']['middlename'];
+      const dob = document.forms['add-student']['dob'];
+      const department = document.forms['add-student']['department'];
+      const level = document.forms['add-student']['level'];
+      const state = document.forms['add-student']['state_of_origin'];
+      const lga = document.forms['add-student']['lga'];
+      const admissionYear = document.forms['add-student']['admission_year'];
+      const matricNumber = document.forms['add-student']['matric_number'];
+      console.log(firstname.value)
+      // firstname
+      if (!isNotEmpty(firstname.value)) {
+        firstname.focus();
+        return false;
+      }
+      // lastname
+      if (!isNotEmpty(lastname.value)) {
+        lastname.focus();
+        return false;
+      }
+      // middlename
+      if (!isNotEmpty(middlename.value)) {
+        middlename.focus();
+        return false;
+      }
+      // dob
+      if (!isNotEmpty(dob.value)) {
+        dob.focus();
+        return false;
+      }
+      // lga
+      if (!isNotEmpty(lga.value)) {
+        lga.focus();
+        return false;
+      }
+      // department
+      if (!isNotEmpty(department.value)) {
+        department.focus();
+        return false;
+      }
+      // level
+      if (!isNotEmpty(level.value)) {
+        level.focus();
+        return false;
+      }
+      // state
+      if (!isNotEmpty(state.value)) {
+        state.focus();
+        return false;
+      }
+      // admissionYear
+      if (!isNotEmpty(admissionYear.value)) {
+        admissionYear.focus();
+        return false;
+      }
+      // matricNumber
+      if (!isNotEmpty(matricNumber.value)) {
+        matricNumber.focus();
+        return false;
+      }
+    }
+  </script>
 </body>
 
 </html>

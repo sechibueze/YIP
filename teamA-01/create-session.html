@@ -43,7 +43,7 @@
 
 <body>
   <div class="container">
-    <form class="form">
+    <form class="form" name="create-session" id="create-session">
       <h2 class="text-lead">Create a new session </h2>
       <div class="form-group">
         <label for="academic_session">Academic session </label>
@@ -62,7 +62,30 @@
 
     </form>
   </div>
+  <script src="./scripts/functions.js"></script>
+  <script>
+    const createSesionForm = document.querySelector('#create-session');
+    createSesionForm.addEventListener('submit', createSession, false);
+    function createSession(e) {
+      e.preventDefault();
+      const acadSession = document.forms['create-session']['academic_session'];
+      const acadSessionDesc = document.forms['create-session']['academic_session_description'];
 
+      if (!isNotEmpty(acadSession.value)) {
+        acadSession.focus();
+        return false;
+      }
+
+      if (!isValidString(acadSessionDesc.value)) {
+        acadSessionDesc.focus();
+        return false;
+      }
+
+
+      alert('success')
+    }
+
+  </script>
 </body>
 
 </html>
