@@ -40,7 +40,7 @@
 
 <body>
   <div class="container">
-    <form class="form">
+    <form class="form" name="verify-payment" id="verify-payment">
       <h2 class="text-lead">Verify payment</h2>
       <div class="form-group">
         <label for="matric_number">Matric Number</label>
@@ -57,7 +57,29 @@
 
     </form>
   </div>
+  <script src="./scripts/functions.js"></script>
+  <script>
+    const VerifyPaymentForm = document.querySelector('#verify-payment');
+    VerifyPaymentForm.addEventListener('submit', verifyPayment, false);
+    function verifyPayment(e) {
+      e.preventDefault();
+      const rNumber = document.forms['verify-payment']['receipt_number'];
+      const mNumber = document.forms['verify-payment']['matric_number'];
 
+      if (!isNotEmpty(rNumber.value)) {
+        rNumber.focus();
+        return false;
+      }
+
+      if (!isNotEmpty(mNumber.value)) {
+        mNumber.focus();
+        return false;
+      }
+
+
+      alert('success')
+    }
+  </script>
 </body>
 
 </html>

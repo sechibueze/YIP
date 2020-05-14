@@ -9,7 +9,7 @@
 
 <body style="font-size: 1rem; line-height: 1.5; box-sizing: border-box;">
   <div class="container" style="display: block; margin: auto; width: 70%;">
-    <form class="form" style="padding: 2rem 1.75rem;">
+    <form name="add-course" id="add-course" class="form" style="padding: 2rem 1.75rem;">
       <h2 class="text-lead">Add course</h2>
       <div class="form-group">
         <label for="course_title">Course title</label>
@@ -84,7 +84,77 @@
 
     </form>
   </div>
+  <script src="./scripts/functions.js"></script>
+  <script>
+    // Add Course validations
+    const AddCourseForm = document.querySelector("#add-course");
+    AddCourseForm.addEventListener('submit', addCourse, false);
+    function addCourse(e) {
+      e.preventDefault();
+      const errors = []
+      const courseTitle = document.forms['add-course']['course_title'];
+      const courseDescription = document.forms['add-course']['course_description'];
+      const academicSession = document.forms['add-course']['academic_session'];
+      const department = document.forms['add-course']['department'];
+      const level = document.forms['add-course']['level'];
+      const courseCode = document.forms['add-course']['course_code'];
+      const courseUnit = document.forms['add-course']['course_unit'];
 
+      // validate courseUnit
+      if (!isNotEmpty(courseUnit.value)) {
+        errors.push('courseUnit is not valid');
+        courseUnit.focus();
+        return false;
+      }
+
+      // validate courseCode
+      if (!isNotEmpty(courseCode.value)) {
+        errors.push('courseCode is not valid');
+        courseCode.focus();
+        return false;
+      }
+
+      // validate level
+      if (!isNotEmpty(level.value)) {
+        errors.push('level is not valid');
+        level.focus();
+        return false;
+      }
+
+      // validate department
+      if (!isValidString(department.value)) {
+        errors.push('department is not valid');
+        department.focus();
+        return false;
+      }
+
+      // validate academicSession
+      if (!isValidString(academicSession.value)) {
+        errors.push('academic Session is not valid');
+        academicSession.focus();
+        return false;
+      }
+
+      // validate courseTitle
+      if (!isValidString(courseTitle.value)) {
+        errors.push('Course title is not valid');
+        courseTitle.focus();
+        return false;
+      }
+
+      // validate courseDescription
+      if (!isValidString(courseDescription.value)) {
+        errors.push('course Description is not valid');
+        courseDescription.focus();
+        return false;
+      }
+
+      if (errors.length === 0) {
+        alert('Success')
+      }
+      console.log('errors :: ', errors)
+    }
+  </script>
 </body>
 
 </html>
